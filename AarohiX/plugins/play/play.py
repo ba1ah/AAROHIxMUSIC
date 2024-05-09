@@ -171,7 +171,7 @@ async def play_commnd(
                     plist_id = (url.split("=")[1]).split("&")[0]
                 else:
                     plist_id = url.split("=")[1]
-                img = config.PLAYLIST_IMG_URL
+                img = "https://telegra.ph/file/ab64e1931e0b108ad960d.jpg"
                 cap = _["play_9"]
             elif "https://youtu.be" in url:
                 videoid = url.split("/")[-1].split("?")[0]
