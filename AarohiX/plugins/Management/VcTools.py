@@ -7,17 +7,17 @@ from config import OWNER_ID
 
 @app.on_message(filters.video_chat_started)
 async def brah(_, msg):
-       await msg.reply("ᴠᴏɪᴄᴇ ᴄʜᴀᴛ sᴛᴀʀᴛᴇᴅ")
+       await msg.reply("𝘝𝘰𝘪𝘤𝘦 𝘊𝘩𝘢𝘵 𝘚𝘵𝘢𝘳𝘵𝘦𝘥")
 
 
 @app.on_message(filters.video_chat_ended)
 async def brah2(_, msg):
-       await msg.reply("**ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ᴇɴᴅᴇᴅ**")
+       await msg.reply("**𝘝𝘰𝘪𝘤𝘦 𝘊𝘩𝘢𝘵 𝘌𝘯𝘥𝘦𝘥**")
 
 
 @app.on_message(filters.video_chat_members_invited)
 async def brah3(app :app, message:Message):
-           text = f"{message.from_user.mention} ɪɴᴠɪᴛᴇᴅ "
+           text = f"{message.from_user.mention} 𝘐𝘯𝘷𝘪𝘵𝘦𝘴 "
            x = 0
            for user in message.video_chat_members_invited.users:
              try:
