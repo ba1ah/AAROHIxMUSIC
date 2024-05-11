@@ -14,13 +14,13 @@ async def give_link_command(client, message):
     # Generate an invite link for the chat where the command is used
     chat = message.chat.id
     link = await app.export_chat_invite_link(chat)
-    await message.reply_text(f"Here's the invite link for this chat:\n{link}")
+    await message.reply_text(f"𝘏𝘦𝘳𝘦'𝘴 𝘵𝘩𝘦 𝘪𝘯𝘷𝘪𝘵𝘦 𝘭𝘪𝘯𝘬 𝘧𝘰𝘳 𝘵𝘩𝘪𝘴 𝘤𝘩𝘢𝘵:\n{link}")
 
 
 @app.on_message(filters.command(["link", "invitelink"], prefixes=["/", "!", "%", ",", "", ".", "@", "#"]) & SUDOERS)
 async def link_command_handler(client: Client, message: Message):
     if len(message.command) != 2:
-        await message.reply("Invalid usage. Correct format: /link group_id")
+        await message.reply("𝘐𝘯𝘷𝘢𝘭𝘪𝘥 𝘶𝘴𝘢𝘨𝘦. 𝘊𝘰𝘳𝘳𝘦𝘤𝘵 𝘧𝘰𝘳𝘮𝘢𝘵: /link group_id")
         return
 
     group_id = message.command[1]
@@ -30,7 +30,7 @@ async def link_command_handler(client: Client, message: Message):
         chat = await client.get_chat(int(group_id))
 
         if chat is None:
-            await message.reply("Unable to get information for the specified group ID.")
+            await message.reply("𝘜𝘯𝘢𝘣𝘭𝘦 𝘵𝘰 𝘨𝘦𝘵 𝘪𝘯𝘧𝘰𝘳𝘮𝘢𝘵𝘪𝘰𝘯 𝘧𝘰𝘳 𝘵𝘩𝘦 𝘴𝘱𝘦𝘤𝘪𝘧𝘪𝘦𝘥 𝘨𝘳𝘰𝘶𝘱 𝘐𝘋.")
             return
 
         try:
