@@ -142,7 +142,7 @@ TAGMES = [ " **𝐇𝐞𝐲 𝐁𝐚𝐛𝐲 𝐊𝐚𝐡𝐚 𝐇𝐨🥱** ",
 async def mentionall(client, message):
     chat_id = message.chat.id
     if message.chat.type == ChatType.PRIVATE:
-        return await message.reply("This command can be used in groups and channels!")
+        return await message.reply("𝘛𝘩𝘪𝘴 𝘤𝘰𝘮𝘮𝘢𝘯𝘥 𝘤𝘢𝘯 𝘣𝘦 𝘶𝘴𝘦𝘥 𝘪𝘯 𝘨𝘳𝘰𝘶𝘱𝘴 𝘢𝘯𝘥 𝘤𝘩𝘢𝘯𝘯𝘦𝘭𝘴!")
 
     is_admin = False
     try:
@@ -156,10 +156,10 @@ async def mentionall(client, message):
         ):
             is_admin = True
     if not is_admin:
-        return await message.reply("Only admin can use this command! . ")
+        return await message.reply("𝘖𝘯𝘭𝘺 𝘢𝘥𝘮𝘪𝘯 𝘤𝘢𝘯 𝘶𝘴𝘦 𝘵𝘩𝘪𝘴 𝘤𝘰𝘮𝘮𝘢𝘯𝘥!")
 
     if message.reply_to_message and message.text:
-        return await message.reply("/tagall  𝐓𝐲𝐩𝐞 𝐋𝐢𝐤𝐞 𝐓𝐡𝐢𝐬 / 𝐑𝐞𝐩𝐥𝐲 𝐀𝐧𝐲 𝐌𝐞𝐬𝐬𝐚𝐠𝐞 𝐍𝐞𝐱𝐭 𝐓𝐢𝐦𝐞 ")
+        return await message.reply("/tagall  𝘛𝘺𝘱𝘦 𝘓𝘪𝘬𝘦 𝘛𝘩𝘪𝘴 / 𝘙𝘦𝘱𝘭𝘺 𝘈𝘯𝘺 𝘔𝘦𝘴𝘴𝘢𝘨𝘦 𝘕𝘦𝘹𝘵 𝘛𝘪𝘮𝘦 ")
     elif message.text:
         mode = "text_on_cmd"
         msg = message.text
@@ -167,11 +167,11 @@ async def mentionall(client, message):
         mode = "text_on_reply"
         msg = message.reply_to_message
         if not msg:
-            return await message.reply("/tagall 👈 Try this or reply any message ...")
+            return await message.reply("/tagall 👈 𝘛𝘳𝘺 𝘵𝘩𝘪𝘴 𝘰𝘳 𝘳𝘦𝘱𝘭𝘺 𝘢𝘯𝘺 𝘮𝘦𝘴𝘴𝘢𝘨𝘦 ...")
     else:
-        return await message.reply("/tagall 👈 Try this or reply any message ..")
+        return await message.reply("/tagall 👈 𝘛𝘳𝘺 𝘵𝘩𝘪𝘴 𝘰𝘳 𝘳𝘦𝘱𝘭𝘺 𝘢𝘯𝘺 𝘮𝘦𝘴𝘴𝘢𝘨𝘦 ..")
     if chat_id in spam_chats:
-        return await message.reply("𝐏𝐥𝐞𝐚𝐬𝐞 𝐀𝐭 𝐅𝐢𝐫𝐬𝐭 𝐒𝐭𝐨𝐩 𝐑𝐮𝐧𝐧𝐢𝐧𝐠 𝐏𝐫𝐨𝐜𝐞𝐬𝐬 ...")
+        return await message.reply("𝘗𝘭𝘦𝘢𝘴𝘦 𝘈𝘵 𝘍𝘪𝘳𝘴𝘵 𝘚𝘵𝘰𝘱 𝘙𝘶𝘯𝘯𝘪𝘯𝘨 𝘗𝘳𝘰𝘤𝘦𝘴𝘴..")
     spam_chats.append(chat_id)
     usrnum = 0
     usrtxt = ""
@@ -200,7 +200,7 @@ async def mentionall(client, message):
 @app.on_message(filters.command(["cancel", "stop"]))
 async def cancel_spam(client, message):
     if not message.chat.id in spam_chats:
-        return await message.reply("No active mention process is started by me.")
+        return await message.reply("𝘕𝘰 𝘢𝘤𝘵𝘪𝘷𝘦 𝘮𝘦𝘯𝘵𝘪𝘰𝘯 𝘱𝘳𝘰𝘤𝘦𝘴𝘴 𝘪𝘴 𝘴𝘵𝘢𝘳𝘵𝘦𝘥 𝘣𝘺 𝘮𝘦.")
     is_admin = False
     try:
         participant = await client.get_chat_member(message.chat.id, message.from_user.id)
@@ -213,10 +213,10 @@ async def cancel_spam(client, message):
         ):
             is_admin = True
     if not is_admin:
-        return await message.reply("This command is only for admins. You can't use this command.")
+        return await message.reply("𝘛𝘩𝘪𝘴 𝘤𝘰𝘮𝘮𝘢𝘯𝘥 𝘪𝘴 𝘰𝘯𝘭𝘺 𝘧𝘰𝘳 𝘢𝘥𝘮𝘪𝘯𝘴. 𝘠𝘰𝘶 𝘤𝘢𝘯'𝘵 𝘶𝘴𝘦 𝘵𝘩𝘪𝘴 𝘤𝘰𝘮𝘮𝘢𝘯𝘥.")
     else:
         try:
             spam_chats.remove(message.chat.id)
         except:
             pass
-        return await message.reply("♦ Mention process stopped ♦")
+        return await message.reply("♦️ 𝘔𝘦𝘯𝘵𝘪𝘰𝘯 𝘱𝘳𝘰𝘤𝘦𝘴𝘴 𝘴𝘵𝘰𝘱𝘱𝘦𝘥 ♦️")
