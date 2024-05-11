@@ -5,7 +5,7 @@ from AarohiX import app
 @app.on_message(filters.command("groupinfo", prefixes="/"))
 async def get_group_status(_, message: Message):
     if len(message.command) != 2:
-        await message.reply("Please provide a group username. Example: `/groupinfo YourGroupUsername`")
+        await message.reply("𝘗𝘭𝘦𝘢𝘴𝘦 𝘱𝘳𝘰𝘷𝘪𝘥𝘦 𝘢 𝘨𝘳𝘰𝘶𝘱 𝘶𝘴𝘦𝘳𝘯𝘢𝘮𝘦. 𝘌𝘹𝘢𝘮𝘱𝘭𝘦: /𝘨𝘳𝘰𝘶𝘱𝘪𝘯𝘧𝘰 𝘠𝘰𝘶𝘳𝘎𝘳𝘰𝘶𝘱𝘜𝘴𝘦𝘳𝘯𝘢𝘮𝘦")
         return
     
     group_username = message.command[1]
