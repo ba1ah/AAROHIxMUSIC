@@ -25,3 +25,4 @@ async def ping_com(client, message: Message, _):
     await response.edit_text(
         _["ping_2"].format(resp, app.mention, UP, RAM, CPU, DISK, pytgping, SUPPORT_CHAT),
         reply_markup=supp_markup(_),
+    )
