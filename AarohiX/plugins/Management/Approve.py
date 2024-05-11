@@ -96,7 +96,7 @@ font_path = "AarohiX/assets/adisa.ttf"
 chat_id_env = environ.get("CHAT_ID")
 CHAT_ID = [int(Adisa) for Adisa in chat_id_env.split(",")] if chat_id_env else []
 
-TEXT = environ.get("APPROVED_WELCOME_TEXT", "**╭━─━─━─━─━─≪ ♡ ≫─━─━─━─━─━╮**\n**🙏ʀᴀᴍ ʀᴀᴍ {mention} 🚩**\n\n**✨ᴡᴇʟᴄᴏᴍᴇ ɪɴ {title}✨**\n\n**🍁ᴍᴀᴋᴇ ɴᴇᴡ ғʀɪᴇɴᴅs ᴀɴᴅ sᴛᴀʏ ᴀᴄᴛɪᴠᴇ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ🍁**\n**╰━─━─━─━─━─≪ ♡ ≫─━─━─━─━─━╯**")
+TEXT = environ.get("APPROVED_WELCOME_TEXT", "**╭━─━─━─━─━─≪ ♡ ≫─━─━─━─━─━╮**\n**𝘏𝘦𝘺 𝘋𝘢𝘳𝘭𝘪𝘯𝘨 {mention} 🚩**\n\n**𝘞𝘦𝘭𝘤𝘰𝘮𝘦 𝘪𝘯 {title}**\n\n**𝘏𝘢𝘷𝘦 𝘢 𝘨𝘰𝘰𝘥 𝘥𝘢𝘺 𝘥𝘦𝘢𝘳**\n**╰━─━─━─━─━─≪ ♡ ≫─━─━─━─━─━╯**")
 APPROVED = environ.get("APPROVED_WELCOME", "on").lower()
 
 # List of random photo links
@@ -122,7 +122,7 @@ async def autoapprove(client: Adisa, message: ChatJoinRequest):
         profile_path=photo,
     )
 
-    print(f"{user.first_name} Joined 🤝") 
+    print(f"{user.first_name} 𝘑𝘰𝘪𝘯𝘦𝘥 🤝") 
 
   
     await client.approve_chat_join_request(chat_id=chat.id, user_id=user.id)
@@ -136,7 +136,7 @@ async def autoapprove(client: Adisa, message: ChatJoinRequest):
             [
                 [
                     InlineKeyboardButton(
-                        "• ʀᴇᴘᴏ •", callback_data="gib_source")
+                        "• 𝐴𝑑𝑑 𝑀𝑒 •", url=f"https://t.me/{app.username}?startgroup=true")
                 ]
             ]
         ),
