@@ -11,19 +11,19 @@ async def pinterest(_, message):
      try:
        query= message.text.split(None,1)[1]
      except:
-         return await message.reply("**ɢɪᴠᴇ ɪᴍᴀɢᴇ ɴᴀᴍᴇ ғᴏʀ sᴇᴀʀᴄʜ 🔍**")
+         return await message.reply("**𝘎𝘪𝘷𝘦 𝘪𝘮𝘢𝘨𝘦 𝘯𝘢𝘮𝘦 𝘧𝘰𝘳 𝘴𝘦𝘢𝘳𝘤𝘩....🔍**")
 
      images = get(f"https://pinterest-api-one.vercel.app/?q={query}").json()
 
      media_group = []
      count = 0
 
-     msg = await message.reply(f"sᴄʀᴀᴘɪɴɢ ɪᴍᴀɢᴇs ғʀᴏᴍ ᴘɪɴᴛᴇʀᴇᴛs...")
+     msg = await message.reply(f"𝘚𝘤𝘳𝘢𝘱𝘪𝘯𝘨 𝘪𝘮𝘢𝘨𝘦𝘴....")
      for url in images["images"][:6]:
                   
           media_group.append(InputMediaPhoto(media=url))
           count += 1
-          await msg.edit(f"=> ᴏᴡᴏ sᴄʀᴀᴘᴇᴅ ɪᴍᴀɢᴇs {count}")
+          await msg.edit(f"=> 𝘚𝘤𝘳𝘢𝘱𝘦𝘥 𝘪𝘮𝘢𝘨𝘦𝘴 {count}")
 
      try:
         
